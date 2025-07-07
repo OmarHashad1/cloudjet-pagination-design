@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.dt-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dt-data-section {
+    background: #2a2a2a;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dt-data-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.dt-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 32px;
+}
+
+.dt-header-text {
+    flex: 1;
+}
+
+.dt-search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 300px;
+}
+
+.search-input {
+    background: #1a1a1a;
+    border: 1px solid #555;
+    color: #ffffff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-btn {
+    background: #4CAF50;
+    border: none;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.search-btn:hover {
+    background: #45a049;
+}
+
+.dt-data-section p {
+    color: #888;
+    margin-bottom: 0;
+}
+
+.dt-table-container {
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.dt-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dt-table th,
+.dt-table td {
+    padding: 16px;
+    border-bottom: 1px solid #333;
+}
+
+.dt-table th:first-child,
+.dt-table td:first-child {
+    text-align: left;
+    width: 15%;
+}
+
+.dt-table th:nth-child(2),
+.dt-table td:nth-child(2) {
+    text-align: center !important;
+    width: 50%;
+}
+
+.dt-table th:last-child,
+.dt-table td:last-child {
+    text-align: right;
+    width: 35%;
+}
+
+.dt-table th {
+    background: #2a2a2a;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.dt-table td {
+    color: #ccc;
+}
+
+.dt-table tr:hover {
+    background: #333;
+}
+
+.dt-table tr:last-child td {
+    border-bottom: none;
+}
+
+.dt-sort-arrow {
+    float: right;
+    color: #4CAF50;
+    font-size: 0.8rem;
+    margin-left: 8px;
+}
+
+.dt-pagination {
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+.dt-pagination-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dt-pagination-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.dt-pagination-info {
+    color: #888;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.dt-pagination-controls {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dt-pagination-btn {
+    background: transparent;
+    border: 1px solid #555;
+    color: #888;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dt-pagination-btn:hover:not(:disabled) {
+    background: #3a3a3a;
+    color: #ffffff;
+    border-color: #666;
+}
+
+.dt-pagination-btn.active {
+    background: #4CAF50;
+    border-color: #4CAF50;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.dt-pagination-btn:disabled {
+    background: transparent;
+    border: 1px solid #555;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.entries-select {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.entries-select select {
+    background: #1a1a1a !important;
+    border: 1px solid #555;
+    color: #ffffff !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    min-width: 60px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+}
+
+.entries-select select:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.entries-select select option {
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+.entries-select select:hover {
+    border-color: #555;
+}
+
+.entries-select select:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.dt-id-cell {
+    font-family: 'Courier New', monospace;
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.dt-timestamp-cell {
+    color: #888;
+    font-size: 0.85rem;
+}

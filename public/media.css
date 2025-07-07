@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+    .dt-table-container {
+        overflow-x: auto;
+    }
+
+    .dt-header-section {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .dt-search-container {
+        min-width: auto;
+    }
+
+    .dt-pagination-top {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .dt-pagination-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

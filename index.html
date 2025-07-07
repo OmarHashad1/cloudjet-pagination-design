@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table with Pagination</title>
+<link rel="stylesheet" href="./public/style.css">
+<link rel="stylesheet" href="./public/media.css">
+</head>
+<body>
+<div class="dt-container">
+<div class="dt-data-section">
+    <div class="dt-header-section">
+        <div class="dt-header-text">
+            <h2>Data Records</h2>
+            <p>Manage and view all your records</p>
+        </div>
+        <div class="dt-search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search records...">
+            <button class="search-btn" id="searchBtn">Search</button>
+        </div>
+    </div>
+
+    <div class="dt-table-container">
+        <table class="dt-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th id="timestampHeader">
+                        Timestamp
+                        <span class="dt-sort-arrow">↓</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Data will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="dt-pagination">
+        <div class="dt-pagination-top">
+            <div class="dt-pagination-left">
+                <span>Show</span>
+                <select id="entriesSelect">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+                <span>entries</span>
+            </div>
+
+            <div class="dt-pagination-info">
+                <span id="paginationInfo">Showing 1-10 of 156 entries</span>
+            </div>
+        </div>
+
+        <div class="dt-pagination-controls">
+            <button class="dt-pagination-btn" id="firstBtn">«</button>
+            <button class="dt-pagination-btn" id="prevBtn">‹</button>
+            <button class="dt-pagination-btn" id="nextBtn">›</button>
+            <button class="dt-pagination-btn" id="lastBtn">»</button>
+        </div>
+    </div>
+</div>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
